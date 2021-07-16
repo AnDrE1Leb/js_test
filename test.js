@@ -1,2 +1,2 @@
 console.log('hello2');
-console.log("newBranch2 changes")
+console.log("newBranch2 changes2")
