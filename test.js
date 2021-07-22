@@ -1,44 +1,110 @@
-let day = 19;
-if (day >= 0 && day <= 10){
-    console.log("Первая декада");
-}else if (day <= 20){
-    console.log("Вторая декада");
-}else if(day <= 31){
-    console.log("Третья декада");
-}else if (day >= 32) {
-    console.log("Введите коректное число");
+function checkDay(number , prevNumber, name) {
+    if (mainNumber >= prevNumber && mainNumber <= number) {
+        console.log(name);
+        return true
+    }
 }
 
-let month = 7;
-if (month === 12 && month === 1 && month === 2){
-    console.log("Зима");
-}else if (month <= 5){
-    console.log("Весна");
-}else if (month <= 8){
-    console.log("Лето");
-}else if (month <= 11){
-    console.log("Осень");
-}else if (month >= 13) {
-    console.log("Введите коректное число");
+let day =  function() {
+    mainNumber = 29;
+    if (checkDay(10 , 0 ,  "Первая декада")) {
+
+    }else if (checkDay(20 , 11 ,  "Вторая декада")) {
+
+    }else if (checkDay(31 , 21 , "Третья декада")) {
+
+    }else if (checkDay(Infinity, 32 , "Введите коректное число")){
+
+    }
+    return mainNumber
+}
+
+let month =  function(){
+    mainNumber = 7;
+    if (checkDay(2 , 0 ,  "Зима")) {
+
+    }else if (checkDay(5 , 3 ,  "Весна")) {
+
+    }else if (checkDay(8 , 6 , "Лето")) {
+
+    }else if (checkDay(11 , 9 , "Осень")) {
+
+    }else if (checkDay(12 , 12 ,  "Зима")) {
+
+    }else if (checkDay(Infinity, 13 , "Введите коректное число")){
+
+    }
+    return mainNumber
 }
 
 
-let min = 30;
-if (min >= 0 && min <= 14) {
-    console.log("Первая четверть");
-}else if (min <= 30) {
-    console.log("Вторая четверть");
-}else if (min <= 45) {
-    console.log("Третья четверть");
-}else if (min <= 59) {
-    console.log("Четвертая четверть");
-}else if (min >= 60) {
-    console.log("Введите коректное число");
+let min =  function(){
+    mainNumber = 30;
+    if (checkDay(14 , 0 ,  "Первая четверть")) {
+
+    }else if (checkDay(30 , 15 ,  "Вторая четверть")) {
+
+    }else if (checkDay(45 , 31 , "Третья четверть")) {
+
+    }else if (checkDay(59 , 46 , "Четвертая четверть")) {
+
+    }else if (checkDay(Infinity, 60 , "Введите коректное число")){
+
+    }
+
 }
+
+day();
+month();
+min();
+
+// Проверка возраста
 
 let age = 21;
-if (age >= 18){
-    console.log("Добро пожаловать");
-}else {
-    console.log("Только 18+");
+
+let welcome = (age < 18) ?
+    () => console.log('Строго +18!') :
+    () => console.log("Добро пожаловать");
+
+welcome();
+
+
+// Сумма чисел
+
+let sum = 0;
+for (let i = 1; i <= 100; i++) {
+    sum += i;
 }
+console.log("Сумма чисел 1 и 100: " + sum);
+
+
+// Сумма чисел While
+
+function dzWhile() {
+
+    let i = 1;
+    let sumWhile = 0;
+
+
+    while (i <= 100) {
+        sumWhile += i;
+        i++;
+    }
+
+    console.log("Сумма чисел 1 и 100: " + sumWhile + " (While)");
+}
+
+dzWhile()
+
+
+// Сумма чисел Do While
+
+let sumDoWhile = 0;
+let i = 1;
+
+do{
+    sumDoWhile += i;
+    i++;
+}while(i <= 100)
+
+console.log("Сумма чисел 1 и 100: " + sumDoWhile + " (Do While)");
