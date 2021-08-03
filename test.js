@@ -1,29 +1,95 @@
-//Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [1, 2, 3].
+//Задача №1
 
-let arr = [1, 2, 3, 4, 5]
-console.log(arr.slice(0 , 3));
-
-
-//Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [4, 5].
-
-console.log(arr.slice(3));
-
-//Задаем начальную строку чисел. Напишите функцию spliceNum(num, symbol), которая принимает число num в качестве аргумента и symbol в качестве разделителя и вставляет symbol после каждого нечетного числа. Если последний элемент также является нечетным, то вставлять symbol не нужно.
-
-const num = "1124356712453"
-
-function spliceNum (num, symbol){
-    let arr = num.split("");
-    let arrNum = arr.map(Number);
-        for (let i = 0; i < arrNum.length; i++){
-            if (arrNum [i] % 2 !== 0 && arrNum[(i - 1)] % 2 === 0){
-                arrNum.splice(i, 0, symbol);
-            }
-        }
-
-
-    return arrNum.join("");
+let obj1 = {
+    a: 1,
+    b: 1,
 }
 
-console.log(spliceNum(num,"-"));
+let obj2 = {
+    a: 1,
+    b: 1,
+}
+
+
+function isEqual (obj1 , obj2) {
+    let objKeys = Object.keys(obj1);
+    let objKeys2 = Object.keys(obj2);
+
+    if (objKeys.length !== objKeys2.length){
+        return false;
+    }
+    for (let prop in obj1) {
+        if (obj1[prop] !== obj2[prop]) {
+            return false;
+        }
+
+    }
+
+    return true;
+}
+
+console.log(isEqual(obj1 , obj2));
+
+//Напишите свой аналог метода Object.keys();
+
+function objKeys (obj){
+    let arr = [];
+    for (let i in obj){
+        arr.push(i);
+    }
+    return arr;
+}
+
+console.log(objKeys(obj1));
+
+//Напишите свой аналог метода Object.values();
+
+function objValues (obj){
+    let arr = [];
+    for (let i in obj){
+        arr.push(obj[i]);
+    }
+    return arr;
+}
+
+console.log(objValues(obj1));
+
+
+//С помощью функций конструкторов создайте ферму животных. Ферма будет массивом, а объекты – животными. Создайте несколько разных животных и потом отфильтруйте их из массива животных по разным критериям. Например по месту проживания или питанию
+
+
+function Animal(name) {
+    this.name = name;
+}
+
+let lion = {
+    species : "Млекопитающие",
+    eat : "Хищник",
+    size : "Большой",
+}
+
+let pigeon = {
+    species : "Птицы",
+    eat : "Травоядное",
+    size : "Маленький",
+}
+
+let eagle = {
+    species : "Птицы",
+    eat : "Хищник",
+    size : "Маленький",
+}
+
+let sheep = {
+    species : "Млекопитающие",
+    eat : "Травоядное",
+    size : "Средний",
+}
+
+let cat = {
+    species : "Млекопитающие",
+    eat : "Хищник",
+    size : "Маленький",
+}
+
 
