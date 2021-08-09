@@ -1,0 +1,98 @@
+
+body {
+    background-color: beige;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.main_btn {
+    padding: 20px 50px;
+    margin: 200px 0 0 0;
+    text-transform: uppercase;
+    background-color: #f4a460;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 0 10px 15px 0 black;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.main_btn:hover {
+    border: 2px solid white;
+    color: white;
+}
+
+.modal_window {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(244, 165, 96, .8);
+    top: 0;
+    left: 0;
+}
+
+.modal_container form {
+    padding: 143px 0 0 0;
+    position: relative;
+}
+
+.modal_container form input {
+    display: block;
+    margin: 0 0 40px 0;
+    padding: 10px 100px;
+    border: 2px solid transparent;
+    outline: none;
+    text-align: center;
+    transition: .5s ease;
+    border-radius: 50px;
+}
+
+.modal_container form input:hover {
+    border: 2px solid gold;
+    box-shadow: 0 10px 20px 0 black;
+}
+
+.beer_btn {
+    padding: 10px 30px;
+    text-transform: uppercase;
+    background-color: #f4a460;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: 0 10px 15px 0 black;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: .5s ease;
+}
+
+.beer_btn:hover {
+    border: 2px solid white;
+    color: white;
+}
+
+.cards {
+    padding: 180px 0 0 0;
+
+}
+
+.card {
+    background-color: #f4a460;
+    padding: 30px 60px;
+    box-shadow: 0 10px 15px 0 black;
+    border-radius: 50px;
+    margin: 0 20px;
+}
+
+.card p {
+    font-size: 20px;
+    padding: 0 0 10px 0;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Пиво</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="" id="wrapper">
+    <div class="container">
+        <button class="main_btn" id="mainBtn" type="button" name="button_main">Пиво</button>
+    </div>
+    <div class="modal_window" id="modal">
+        <div class="container modal_container">
+            <form class="modal_form" action="index.html" method="post">
+                <input type="text" name="beerName" id="beerName" value="" placeholder="Название пива">
+                <input type="text" name="beerSrc" id="beerSrc" value="" placeholder="Ссылка на фотку пива">
+                <input type="text" name="beerDisc" id="beerDesc"  value="" placeholder="Описание пива">
+                <button class="beer_btn" id="addBtn" type="button" name="buttonBeer">Создать</button>
+            </form>
+        </div>
+    </div>
+    <div class="cards" id="cardsBeer">
+        <div class="container" id="beerContainer">
+
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="js/pivo.js"></script>
+</body>
+</html>
