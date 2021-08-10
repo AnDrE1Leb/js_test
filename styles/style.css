@@ -28,13 +28,17 @@ body {
 }
 
 .modal_window {
-    display: none;
+    /*display: none;*/
     width: 100vw;
     height: 100vh;
     position: absolute;
     background-color: rgba(244, 165, 96, .8);
     top: 0;
     left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+    z-index: 10;
 }
 
 .modal_container form {
@@ -95,4 +99,11 @@ body {
 .card p {
     font-size: 20px;
     padding: 0 0 10px 0;
+}
+
+.igor {
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    z-index: 5;
 }

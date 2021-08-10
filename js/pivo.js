@@ -18,11 +18,16 @@ const BEERS = [];
 // }
 
 MAIN_BUTTON.addEventListener('click', function open() {
-    MODAL.style.display = 'block';
+    // MODAL.style.display = 'block';
+    MODAL.style.visibility = 'visible'
+    MODAL.style.opacity = '1';
+
 })
 
 function modalClose() {
-    MODAL.style.display = 'none';
+    // MODAL.style.display = 'none';
+    MODAL.style.visibility = 'hidden'
+    MODAL.style.opacity = '0';
 }
 
 
